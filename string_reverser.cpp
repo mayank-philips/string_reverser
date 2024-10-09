@@ -5,7 +5,13 @@ int main() {
     std::string input;
     std::cout << "Enter a string to reverse: ";
     std::getline(std::cin, input);
-    std::reverse(input.begin(), input.end());
-    std::cout << "Reversed string: " << input << std::endl;
+
+    // Manual method to reverse the string
+    std::string reversed;
+    for (int i = input.length() - 1; i >= 0; --i) {
+        reversed += input[i]; // Append characters in reverse order
+    }
+
+    std::cout << "Reversed string: " << reversed << std::endl;
     return 0;
 }
